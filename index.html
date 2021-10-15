@@ -4,282 +4,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CellPhone Ebay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <!-- cdn de bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/main.css">
+  <!-- iconos de bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- hoja de estilos custom -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Tienda CellPhone</title>
 </head>
 
 <body>
 
   <!-- navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light d-fixed">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="assets/Group.png" alt="" width="40">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
+      <div class="container">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active titulo me-2" aria-current="page" href="#">Tienda CellPhone</a>
+            <a class="nav-link active d-none d-sm-none d-md-none d-lg-block me-2" aria-current="page" href="#">
+              <i class="bi bi-megaphone me-2"></i>
+              Tienda CellPhone
+            </a>
           </li>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <li class="input-bar nav-item">
+            <form class="d-flex">
+              <input class="form-control rounded-pill search ms-4" type="search" placeholder="Search"
+                aria-label="Search" />
+            </form>
+          </li>
         </ul>
-        <ul class="navbar-nav">
-          <button type="submit" class="btn btn-primary me-2 mt-1">Inicio</button>
-          <button type="submit" class="btn btn-primary me-2 mt-1">Estadisticas</button>
-          <a class="navbar-brand" href="#">
-            <img src="assets/agregar.png" alt="" width="32">
-          </a>
-          <a class="navbar-brand" href="#">
-            <img src="assets/Vector.png" alt="" width="32" class="me-5">
-          </a>
-        </ul>
-
-      </div>
-    </div>
-  </nav>
-
-  <div class="container mt-5">
-    <div class="row">
-
-      <div class="col-3 ">
-        <div class="container-fluid row" style="overflow-x: hidden; overflow-y: auto; height: 25em; border: 0px; padding: 10px; border-radius: 10px; position: fixed; width: 15rem;">
-          <div class="col-12 m-0">
-            <div class="form-check form-switch ">
-              <label class="form-check-label" for="flexSwitchCheckChecked">Nuevo</label>
-              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-            </div>
-          </div>
-
-          <ul class="list-group mt-3">
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Samsung
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Huawei
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Nokia
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              ¡Phone
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Xiaomi
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item  .d-sm-block  d-lg-none">
+              <a class="nav-link active  me-2" aria-current="page" href="#">
+                <i class="bi bi-megaphone me-2"></i>
+                Tienda CellPhone
+              </a>
             </li>
           </ul>
-
-          <ul class="list-group mt-3">
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Android
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Windows
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Ios
-            </li>
-          </ul>
-
-          <ul class="list-group mt-3">
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              6.0
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              5.5
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              5
-            </li>
+          <ul class="navbar-nav">
+            <button type="submit" class="btn bg-01 text-white me-2 ">Inicio</button>
+            <button type="submit" class="btn bg-01 text-white me-3 ">Estadisticas</button>
+            <a class="navbar-brand btn" href="#">
+              <i class="bi bi-plus-circle-fill"></i>
+            </a>
+            <a class="navbar-brand btn" href="#">
+              <i class="bi bi-cart2"></i>
+            </a>
           </ul>
         </div>
       </div>
+    </nav>
+  </header>
+  <!-- fin de barra de navigation -->
 
-      <div class="col-9">
-        <div class="container" style="height: 25em;">
-          <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
-            <!--card 1-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
+  <div class="container mt-4">
+    <div class="row">
+      <!-- left menu-->
+      <div class="col-lg-3 d-xl-block d-md-none d-sm-none d-lg-block d-none mt-4 overflow-auto lateral-bar" >
+        <div class="container">
 
-            <!--card 2-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 3-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 4-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 5-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 6-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 7-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 8-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-            <!--card 5-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 6-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 7-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--card 8-->
-            <div class="col-3">
-              <div class="card" style="width: 12rem; height: 15rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick examp up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Ir al producto</a>
-                </div>
-              </div>
-            </div>
-
-
+          <!-- switch -->
+          <div class="form-check form-switch mb-2 mt-3">
+            <label class="form-check-label" for="flexSwitchCheckChecked">Nuevo</label>
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
           </div>
+
+          <!-- left menu lists-->
+
+          <!-- model list-->
+          <label class="mt-2 mb-2" for="brand">Modelos</label>
+          <ul class="list-group" id="brand">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              Samsung
+              <span class="badge bg-01 rounded-pill">15</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              Huawei
+              <span class="badge bg-01 rounded-pill">10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              Nokia
+              <span class="badge bg-01 rounded-pill">56</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              iPhone
+              <span class="badge bg-01 rounded-pill">4</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              Xiaomi
+              <span class="badge bg-01 rounded-pill">4</span>
+            </li>
+          </ul>
+
+          <!-- system list-->
+          <label class="mt-3 mb-2" for="system">Sistema</label>
+          <ul class="list-group" id="system">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              Android
+              <span class="badge bg-01 rounded-pill">15</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              Windows
+              <span class="badge bg-01 rounded-pill">10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              Ios
+              <span class="badge bg-01 rounded-pill">56</span>
+            </li>
+          </ul>
+
+          <!-- screen list-->
+          <label class="mt-3 mb-3" for="screen">Pantalla</label>
+          <ul class="list-group mb-3" id="screen">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              6.0
+              <span class="badge bg-01 rounded-pill">6</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              5.5
+              <span class="badge bg-01 rounded-pill">10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+              5
+              <span class="badge bg-01 rounded-pill">5</span>
+            </li>
+          </ul>
+
         </div>
       </div>
     </div>
   </div>
 
+
+
+
+  <!-- cdn de bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>

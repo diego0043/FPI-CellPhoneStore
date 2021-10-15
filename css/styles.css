@@ -1,0 +1,50 @@
+
+.lateral-bar{
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  height: 75vh; 
+  border: 0px; 
+  padding: 10px; 
+  border-radius: 10px; 
+  position: fixed; 
+  width: 17rem;
+}
+
+.bg-01{
+  background-color: #FF7146  !important;
+}
+  
+.bg-02{
+  background-color: #E2DBD7  !important;
+}
+
+.bg-03{
+  background-color: #FFFFFF   !important;
+}
+
+.bg-04{
+  background-color: #0B6873  !important;
+}
+
+
+
+@media (min-width: 992px) { 
+  .input-bar  input {
+    width: 550px !important;
+  }
+ }
+
+ @media (min-width:992px){
+   .card-size div {
+      height:15.5rem !important;
+      width: 12rem !important;
+   }
+ }
+
+ @media (min-width: 576px) { 
+  .card-size div {
+    height:15rem !important;
+    width: 10rem !important;
+ }
+ }
+
