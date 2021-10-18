@@ -10,6 +10,11 @@
   width: 17rem;
 }
 
+
+br {
+ border: 10px solid #0000 !important;
+}
+
 .bg-01{
   background-color: #FF7146  !important;
 }
@@ -28,9 +33,15 @@
 
 
 
-@media (min-width: 992px) { 
+@media (min-width: 810px) { 
   .input-bar  input {
     width: 550px !important;
+  }
+ }
+
+ @media (min-width: 1920px) { 
+  .input-bar  input {
+    width: 600px !important;
   }
  }
 
