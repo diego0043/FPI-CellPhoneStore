@@ -31,6 +31,7 @@
             text-normal
           " for="">Tienda CellPhone</label>
       <form class="d-flex">
+        
         <input class="form-control me-2 rounded-pill mt-1 first-input input-normal" type="search" placeholder="Search"
           aria-label="Search" />
         <button class="btn btn-outline-success mt-1 btn-my" type="submit">
@@ -120,37 +121,27 @@
         </div>
       </div>
 
-        <!-- main container-->
-        <div
-          class="col mt-5 overflow-auto"
-          style="height: 77vh; margin-left: 3rem"
-        >
-          <!-- filters-->
+      <!-- main container-->
+      <div class="col mt-5 overflow-auto" style="height: 77vh">
+        <!-- filters-->
 
-          <!-- mobile list -->
-          <div
-            class="row mt-2 d-xl-none d-md-none d-sm-block d-lg-none d-none"
-          >
-            <div class="col">
-              <div class="row">
-                <div class="col-7">
-                  <div class="row">
-                    <div class="col-6">
-                      <input
-                        type="text"
-                        class="form-control mb-2 mr-sm-2"
-                        id="inlineFormInputName2"
-                        placeholder="Ordenar por:"
-                      />
-                    </div>success
+        <!-- mobile list -->
+        <div class="row mt-2 d-xl-none d-xxl-none d-md-none d-sm-block d-lg-none d-block">
+          <div class="col">
 
-                    <div class="col-6">
-                      <select class="form-select" id="inputGroupSelect01">
-                        <option selected>Fecha</option>
-                        <option value="1">Precio</option>
-                      </select>
-                    </div>
->>>>>>> efc85c31206c6439584eef671d9a4e24060e30b1
+            <div class="row">
+
+              <div class="col-8">
+                <div class="row">
+                  <div class="col-6">
+                    <input type="text" class="form-control mb-2 mr-sm-2 input-no-input" id="inlineFormInputName2"
+                      placeholder="Ordenar por:" >
+                  </div>
+                  <div class="col-6">
+                    <select class="form-select input-normal" id="inputGroupSelect01">
+                      <option selected>Fecha</option>
+                      <option value="1">Precio</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -263,7 +254,7 @@
         <!-- cards-->
 
         <div class="row mt-3">
-          <div v-for="(phones,id) in cellPhones" class="
+          <div v-for="(phones,id) in cellPhones" :key="id" class="
                 col-sm-6 col-lg-3 col-md-4 col-xl-3 col-xxl-3 col-6
                 mt-2
                 mb-2
@@ -288,20 +279,20 @@
                     <div class="row">
                       <a href="#" class="btn-fav text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
                         title="Agregar a favoritos">
-                        <i class="bi bi-heart"></i>
+                        <i v-on:click="cambiarIconLove(id)" class="bi bi-heart" :id="`love${id}`"></i>
                       </a>
                     </div>
-                    <div class="row mx-auto">{{favorites[id]}}</div>
+                    <div class="row mx-auto" :id="`favNumber${id}`" >{{favorites[id]}}</div>
                   </div>
 
                   <div class="col-3">
                     <div class="row">
                       <a href="#" class="btn-fav text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom"
                         title="Guardar anuncio">
-                        <i class="bi bi-bookmark-plus"></i>
+                        <i v-on:click="cambiarIconSalvarPublicacion(id)" class="bi bi-bookmark-plus" :id="`salvar${id}`"></i>
                       </a>
                     </div>
-                    <div class="row mx-auto">{{save[id]}}</div>
+                    <div class="row mx-auto" :id="`salvarNumber${id}`">{{save[id]}}</div>
                   </div>
                 </div>
               </div>
@@ -840,6 +831,7 @@
           "LG",
         ],
         namePhone: "",
+        love: 0,
         favorites: [
           50, 500, 40, 200, 300, 500, 300, 700, 100, 50, 40, 200, 300, 500,
           300, 700, 100, 40, 200, 300,
@@ -848,12 +840,52 @@
           300, 500, 300, 700, 100, 50, 40, 200, 300, 500, 200, 100, 150, 50,
           40, 200, 300, 500, 300, 700,
         ],
+        activos: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        guardados: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
       },
       methods: {
         //Metodo para obtener el nombre del celular en el modal
         obtenerNombre: function (pos) {
           this.namePhone = this.cellPhones[pos];
         },
+
+        cambiarIconLove: function(pos) {
+          let id_iconLove = 'love'+pos
+          let id_number = 'favNumber'+pos
+
+          if(this.activos[pos] === 0){
+            document.getElementById(id_iconLove).className = "bi bi-heart-fill";
+            document.getElementById(id_number).textContent = this.favorites[pos] + 1;
+            this.favorites[pos] += 1;
+            this.activos[pos] = 1;
+            
+            
+          }
+          else{
+            document.getElementById(id_iconLove).className = "bi bi-heart";
+            document.getElementById(id_number).textContent = this.favorites[pos] - 1;
+            this.favorites[pos] += -1;
+            this.activos[pos] = 0;
+          }
+        },
+
+        cambiarIconSalvarPublicacion: function(pos){
+          let id_iconSalvar = 'salvar'+pos
+          let id_salvarNumber = 'salvarNumber'+pos
+
+          if(this.guardados[pos] === 0){
+            document.getElementById(id_iconSalvar).className = "bi bi-bookmark-check-fill";
+            document.getElementById(id_salvarNumber).textContent = this.save[pos] + 1;
+            this.save[pos] += 1;
+            this.guardados[pos] = 1;
+          }
+          else{
+            document.getElementById(id_iconSalvar).className = "bi bi-bookmark-plus";
+            document.getElementById(id_salvarNumber).textContent = this.save[pos] - 1;
+            this.save[pos] += -1;
+            this.guardados[pos] = 0;
+          }
+        }
       },
     });
   </script>
