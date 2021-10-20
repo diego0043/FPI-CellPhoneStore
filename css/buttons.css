@@ -6,8 +6,7 @@
 	align-items: center;
 	justify-content: center;
 	height: 35px;
-	background: #212529;
-    border: 1px solid #f37848 !important;
+    background: #212529;
 	color: #fff;
 	font-size: 17px;
 	font-weight: 500;
@@ -29,6 +28,8 @@
 
 .boton.inicio{
     width: 90px;
+
+    border: 1px solid #f37848 !important;
 }
 
 .boton.inicio span {
@@ -73,6 +74,7 @@
 
 .boton.estadisticas{
     width: 130px;
+    border: 1px solid #f37848 !important;
 }
 
 .boton.estadisticas span {
@@ -109,4 +111,99 @@
 
 .boton.estadisticas:hover span {
 	left: 8px;
+}
+
+/* boton precio */
+
+.boton.precio {
+    width: 90px;
+    color: #fff;
+    background:#f37848;
+}
+.boton.precio span {
+	position: absolute;
+	left: 8px;
+}
+
+.boton.precio .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: calc(100% - 35px);
+	opacity: 1;
+}
+
+.boton.precio i {
+	color: #fff;
+	width: 35px;
+	height: auto;
+}
+
+
+.boton.precio::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .4s ease-in-out all;
+	border-radius: 100px;
+	transform-origin: center;
+}
+
+.boton.precio:hover::after {
+	transform: scale(500);
+	background: #000;
+}
+
+
+
+/* boton fecha */
+
+.boton.fecha {
+    width: 90px;
+    color: #fff;
+    background:#f37848;
+}
+.boton.fecha span {
+	position: absolute;
+    left: 8px;
+}
+
+.boton.fecha .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: calc(100% - 35px);
+	opacity: 1;
+}
+
+.boton.fecha i {
+	color: #fff;
+	width: 35px;
+	height: auto;
+}
+
+.boton.fecha::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .4s ease-in-out all;
+	border-radius: 100px;
+	transform-origin: center;
+}
+
+.boton.fecha:hover::after {
+	transform: scale(500);
+	background: #000;
 }
