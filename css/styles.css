@@ -1,22 +1,11 @@
-
-.lateral-bar{
-  overflow-x: hidden; 
-  overflow-y: auto; 
-  height: 75vh; 
-  border: 0px; 
-  padding: 10px; 
-  border-radius: 10px; 
-  position: fixed; 
-  width: 17rem;
+*{
+  font-family: 'Roboto', sans-serif;
 }
 
-
-br {
- border: 10px solid #0000 !important;
-}
+/* paleta de colores */
 
 .bg-01{
-  background-color: #FF7146  !important;
+  background-color: #f37848  !important;
 }
   
 .bg-02{
@@ -31,11 +20,35 @@ br {
   background-color: #0B6873  !important;
 }
 
+/* iconos */
 
+
+
+.iconos i{
+  color:#FF7146;
+}
+
+
+/* otros elementos graficos */
+
+.lateral-bar{
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  height: 75vh; 
+  border: 0px; 
+  padding: 10px; 
+  border-radius: 10px; 
+  position: fixed; 
+  width: 17rem;
+}
+
+
+
+/* media queries para tamanios de barra search y  cards */
 
 @media (min-width: 810px) { 
   .input-bar  input {
-    width: 550px !important;
+    width: 450px !important;
   }
  }
 
