@@ -28,7 +28,7 @@
             mt-1
             me-2
             d-xl-block d-lg-none d-md-none d-sm-none d-none
-            text-normal
+            text-title
           " for="">Tienda CellPhone</label>
       <form class="d-flex">
         
@@ -82,7 +82,7 @@
             d-xl-block d-md-none d-sm-none d-lg-none d-xs-none d-none
             mt-5
             overflow-auto
-          " style="height: 77vh">
+          " style="height: 85vh">
         <div class="container">
           <!-- switch -->
           <div class="form-check form-switch mb-2 mt-3">
@@ -122,7 +122,7 @@
       </div>
 
       <!-- main container-->
-      <div class="col mt-5 overflow-auto" style="height: 77vh">
+      <div class="col mt-5 overflow-auto" style="height: 85vh">
         <!-- filters-->
 
         <!-- mobile list -->
@@ -282,7 +282,7 @@
                         <i v-on:click="cambiarIconLove(id)" class="bi bi-heart" :id="`love${id}`"></i>
                       </a>
                     </div>
-                    <div class="row mx-auto" :id="`favNumber${id}`" >{{favorites[id]}}</div>
+                    <div class="row mx-auto text-danger" :id="`favNumber${id}`" >{{favorites[id]}}</div>
                   </div>
 
                   <div class="col-3">
@@ -292,7 +292,7 @@
                         <i v-on:click="cambiarIconSalvarPublicacion(id)" class="bi bi-bookmark-plus" :id="`salvar${id}`"></i>
                       </a>
                     </div>
-                    <div class="row mx-auto" :id="`salvarNumber${id}`">{{save[id]}}</div>
+                    <div class="row mx-auto text-dark" :id="`salvarNumber${id}`">{{save[id]}}</div>
                   </div>
                 </div>
               </div>
@@ -304,7 +304,7 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title text-title" id="exampleModalLabel">
-                      {{namePhone}}
+                      <i class="bi bi-shop "></i> {{namePhone}}
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
@@ -389,34 +389,34 @@
                                   <table class="table">
                                     <tbody>
                                       <tr>
-                                        <th scope="row" class="text-title"><i class="bi bi-phone"></i>Estado</th>
+                                        <th scope="row" class="text-title"><i class="bi bi-phone"></i> Estado</th>
                                         <td class="text-normal">Nuevo</td>
                                       </tr>
                                       <tr>
-                                        <th scope="row" class="text-title">Marca</th>
+                                        <th scope="row" class="text-title"><i class="bi bi-apple"></i> Marca</th>
                                         <td class="text-normal">Samsung</td>
                                       </tr>
                                       <tr>
-                                        <th scope="row" class="text-title">Modelo</th>
-                                        <td class="text-normal">namePhone</td>
+                                        <th scope="row" class="text-title"><i class="bi bi-grid-1x2"></i> Modelo</th>
+                                        <td class="text-normal">{{namePhone}}</td>
                                       </tr>
 
                                       <tr>
-                                        <th scope="row" class="text-title">Pantalla</th>
+                                        <th scope="row" class="text-title"><i class="bi bi-phone-landscape"></i> Pantalla</th>
                                         <td class="text-normal">7 pulgadas</td>
                                       </tr>
                                       <tr>
-                                        <th scope="row" class="text-title">Sistema</th>
+                                        <th scope="row" class="text-title"><i class="bi bi-terminal"></i> Sistema</th>
                                         <td class="text-normal">Ios</td>
                                       </tr>
                                       <tr>
-                                        <th scope="row" class="text-title">Rom</th>
+                                        <th scope="row" class="text-title"><i class="bi bi-sd-card"></i> Rom</th>
                                         <td class="text-normal">128 GB</td>
                                       </tr>
 
                                       <tr>
-                                        <th scope="row" class="text-title">Ram</th>
-                                        <td class="text-normal">8 GB</td>
+                                        <th scope="row" class="text-title"><i class="bi bi-speedometer2"></i> Ram</th>
+                                        <td class="text-normal"> 8 GB</td>
                                       </tr>
                                     </tbody>
                                   </table>
@@ -515,30 +515,31 @@
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="title">Nuevo Producto</h5>
+            <h5 class="modal-title text-title" id="title"><i class="bi bi-shop"></i> Nuevo Producto</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="row">
               <!-- form new product-->
-              <div class="col-xl-6">
-                <div class="container">
+              <div class="col-xl-6 col-xxl-6 col-lg-12 d-none d-lg-block d-xl-block d-xxl-block">
+                <div class="container shadow p-3 card-border mb-3">
+
                   <div class="row mb-1">
                     <div class="col">
                       <div class="row">
                         <div class="col-3">
-                          <label for="#" class="form-label">Estado</label>
+                          <label for="#" class="form-label text-title"><i class="bi bi-phone"></i> Estado</label>
                         </div>
                         <div class="col">
                           <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                               value="option1" />
-                            <label class="form-check-label" for="inlineRadio1">Nuevo</label>
+                            <label class="form-check-label text-normal" for="inlineRadio1">Nuevo</label>
                           </div>
                           <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                               value="option2" />
-                            <label class="form-check-label" for="inlineRadio2">Usado</label>
+                            <label class="form-check-label text-normal" for="inlineRadio2">Usado</label>
                           </div>
                         </div>
                       </div>
@@ -547,10 +548,10 @@
 
                   <div class="row mb-2">
                     <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Marca</label>
+                      <label for="#" class="form-label text-title"><i class="bi bi-apple"></i> Marca</label>
                     </div>
                     <div class="col">
-                      <input class="form-control" list="datalistOptions" id="exampleDataList"
+                      <input class="form-control input-normal" list="datalistOptions" id="exampleDataList"
                         placeholder="Type to search..." />
                       <datalist id="datalistOptions">
                         <option v-for="phone in masVendidos">
@@ -562,28 +563,28 @@
 
                   <div class="row mb-2">
                     <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Modelo</label>
+                      <label for="#" class="form-label text-title"><i class="bi bi-columns-gap"></i> Modelo</label>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" />
+                      <input type="text " class="form-control input-normal" />
                     </div>
                   </div>
 
                   <div class="row mb-2">
                     <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Pantalla</label>
+                      <label for="#" class="form-label text-title"><i class="bi bi-phone-landscape"></i> Pantalla</label>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" />
+                      <input type="text" class="form-control input-normal" />
                     </div>
                   </div>
 
                   <div class="row mb-2">
                     <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Sistema</label>
+                      <label for="#" class="form-label text-title"><i class="bi bi-terminal"></i> Sistema</label>
                     </div>
                     <div class="col">
-                      <input class="form-control" list="datalistOptions2" id="exampleDataList2"
+                      <input class="form-control input-normal" list="datalistOptions2" id="exampleDataList2"
                         placeholder="Type to search..." />
                       <datalist id="datalistOptions2">
                         <option v-for="sistema in system">{{sistema}}</option>
@@ -593,19 +594,19 @@
 
                   <div class="row mb-2">
                     <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Rom</label>
+                      <label for="#" class="form-label text-title"><i class="bi bi-cpu"></i> Rom</label>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" />
+                      <input type="text " class="form-control input-normal" />
                     </div>
                   </div>
 
                   <div class="row mb-2">
                     <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Ram</label>
+                      <label for="#" class="form-label text-title"><i class="bi bi-speedometer2"></i> Ram</label>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" />
+                      <input type="text" class="form-control input-normal" />
                     </div>
                   </div>
                 </div>
@@ -613,45 +614,73 @@
 
               <!-- seller form-->
               <div class="col-xl-6">
-                <div class="container">
+                <div class="container shadow p-3 card-border mb-2">
+
+                  <div class="row">
+                   <!-- agregar carousel funcional luego-->
+                  </div>
+
                   <div class="row">
                     <div class="col">
-                      <label for="#" class="form-label text-aling-center">Titulo breve del anuncio</label>
+                      <label for="#" class="form-label text-aling-center text-title"><i class="bi bi-cloud-fog2"></i> Titulo breve del anuncio</label>
                     </div>
                   </div>
 
+                
                   <div class="row mb-2">
                     <div class="col">
-                      <input type="text" class="form-control" />
+                      <input type="text" class="form-control mb-3 input-normal " />
                     </div>
                   </div>
 
+                  <div class="row mb-2 d-block d-xl-none d-xxl-none d-lg-none">
+
+                    <div class="row-fluid">
+                      <div class="col-4 mt-2">
+                        <label for="#" class="form-label text-title"><i class="bi bi-cash"></i> Precio</label>
+                      </div>
+  
+                      <div class="col p2">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text input-icon">$</span>
+                          </div>
+                          <input type="text" class="form-control input-normal" aria-label="Amount (to the nearest dollar)" />
+                        </div>
+                      </div>
+
+                    </div>
+
+                    
+                  </div>  
+
                   <div class="row mb-2">
-                    <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Vendedor</label>
+                    <div class="col-4 mt-2">
+                      <label for="#" class="form-label text-title"><i class="bi bi-person"></i> Vendedor</label>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" />
+                      <input type="text" class="form-control input-normal" />
                     </div>
                   </div>
 
                   <div class="row mb-2">
-                    <div class="col-3 mt-2">
-                      <label for="#" class="form-label">Telefono</label>
+                    <div class="col-4 mt-2">
+                      <label for="#" class="form-label text-title"><i class="bi bi-telephone"></i> Telefono</label>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" />
+                      <input type="text" class="form-control input-normal" />
                     </div>
                   </div>
 
-                  <div class="row mb-2">
+                  <div class="row mb-2 d-none d-lg-block d-xl-block d-xxl-block">
                     <div class="col mt-2">
                       <div class="form-group">
-                        <label class="mb-2" for="exampleFormControlTextarea1">DESCRIPCION</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label class="mb-2 text-title" for="exampleFormControlTextarea1"><i class="bi bi-card-text"></i> DESCRIPCION</label>
+                        <textarea class="form-control input-normal" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
