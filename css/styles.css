@@ -81,17 +81,4 @@
   }
  }
 
- @media (min-width:992px){
-   .card-size div {
-      height:15.5rem !important;
-      width: 12rem !important;
-   }
- }
-
- @media (min-width: 576px) { 
-  .card-size div {
-    height:15rem !important;
-    width: 10rem !important;
- }
- }
 
