@@ -148,6 +148,19 @@
     box-shadow: none;
 }
 
+.btn-buy{
+    border: 1px solid var(--my-primary);
+    background-color: var(--my-primary);
+    color: white;
+    
+}
+
+.btn-home{
+    border: 1px solid var(--my-success);
+    background-color: var(--my-success);
+    color:white;
+}
+
 
 
 

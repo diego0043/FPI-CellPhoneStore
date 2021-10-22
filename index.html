@@ -251,17 +251,15 @@
         <!-- cards-->
 
         <div class="row mt-3">
-          <div v-for="(phones,id) in cellPhones" :key="id" class="
-                col-sm-6 col-lg-3 col-md-4 col-xl-3 col-xxl-3 col-6
-                mt-2
-                mb-2
-              ">
-            <div class="card shadow bg-body rounded card-border" style="width: 12rem">
+
+          <div v-for="(phones,id) in cellPhones" :key="id" class="col-sm-6 col-lg-3 col-md-4 col-xl-3 col-xxl-3 col-6 mt-2 mb-2">
+
+            <div class="card shadow bg-body rounded card-border" style="min-width: 12rem; max-width: 12rem;" >
               <img src="assets/imagen" class="card-img-top" alt="..." width="190px" height="150px" />
               <div class="card-body">
                 <h5 class="card-title text-title">{{phones}}</h5>
                 <p class="card-text text-normal">
-                  title and make up the bulk of the card's content.
+                  {{precios[id]}}
                 </p>
                 <button v-on:click="obtenerNombre(id)" type="button" class="btn btn-my text-title"
                   data-bs-toggle="modal" data-bs-target="#myModal">
@@ -435,31 +433,33 @@
                           </div>
                         </div>
                       </div>
-                      
 
-
-      
-
-
-                      <div class="
-                            container
-                            d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none
-                          ">
-                        <div class="row">
-                          <div class="col">
-                            <button type="button" class="btn btn-outline-danger mt-3 mb-2">
-                              <i class="bi bi-house"></i>
-                              Inicio
-                            </button>
-                          </div>
-                          <div class="col">
-                            <button type="button" class="btn btn-outline-success mt-3 mb-2">
-                              <i class="bi bi-cart-plus"></i>
-                              comprar
-                            </button>
-                          </div>
+                      <div class="row mt-2 mb-4 d-block d-md-block d-lg-none d-xl-none d-xxl-none">
+                        <div class="container fixed-bottom">
+                          <div class="row">
+                            <div class="col-3">
+          
+                            </div>
+          
+                            <div class="col-8 mx-auto mb-1">
+                              <button class="btn btn-home ">
+                                <i class="bi bi-house"></i>
+                                Inicio
+                              </button>
+                              <button class="btn btn-buy">
+                                <i class="bi bi-cart-plus"></i>
+                                Comprar
+                              </button>
+                            </div>
+                            <div class="col">
+          
+                            </div>
+                          </div-row>
+                          
+                          
                         </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -611,7 +611,7 @@
 
               <!-- seller form-->
               <div class="col-xl-6">
-                <div class="container shadow p-3 card-border mb-2">
+                <div class="container shadow p-3 card-border mb-2 ">
 
                   <div class="row">
                    <!-- agregar carousel funcional luego-->
@@ -633,18 +633,22 @@
                   <div class="row mb-2 d-block d-xl-none d-xxl-none d-lg-none">
 
                     <div class="row-fluid">
-                      <div class="col-4 mt-2">
-                        <label for="#" class="form-label text-title"><i class="bi bi-cash"></i> Precio</label>
-                      </div>
-  
-                      <div class="col p2">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text input-icon">$</span>
+                      <div class="row">
+                        <div class="col-4 mt-2">
+                          <label for="#" class="form-label text-title"><i class="bi bi-cash"></i> Precio</label>
+                        </div>
+    
+                        <div class="col p2">
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text input-icon">$</span>
+                            </div>
+                            <input type="text" class="form-control input-normal" aria-label="Amount (to the nearest dollar)" />
                           </div>
-                          <input type="text" class="form-control input-normal" aria-label="Amount (to the nearest dollar)" />
                         </div>
                       </div>
+
+                      
 
                     </div>
 
@@ -682,7 +686,7 @@
               </div>
             </div>
 
-            <div class="row mt-4">
+            <div class="row mt-4 d-none d-lg-block d-xl-block d-xxl-block">
               <div class="col-xl-8">
                 <div class="container">
                   <div class="row mt-2">
@@ -769,24 +773,27 @@
                 </div>
               </div>
 
-              <div class="col-xl-4 p-2">
-                <div class="row">
-                  <label for="" class="form-label mb-2">PRECIO</label>
-                </div>
+              <div class="col-xl-4">
 
-                <div class="row mb-2">
-                  <div class="col-6">
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">$</span>
-                      </div>
-                      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
-                      <div class="input-group-append">
-                        <span class="input-group-text">.00</span>
+                <div class="row">
+                  <div class="container">
+                    <div class="col">
+                      <label for="" class="form-label mb-2">PRECIO</label>
+                    </div>
+  
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
                       </div>
                     </div>
                   </div>
+                  
+
                 </div>
+          
 
                 <div class="row">
                   <div class="container">
@@ -801,6 +808,132 @@
                     </button>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="container shadow p-3 card-border mb-3 mt-2 mx-auto  d-block d-md-block d-lg-none d-xl-none d-xxl-none">
+
+              <div class="row mb-1">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-5">
+                      <label for="#" class="form-label text-title"><i class="bi bi-phone"></i> Estado</label>
+                    </div>
+                    <div class="col">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1" />
+                        <label class="form-check-label text-normal" for="inlineRadio1">Nuevo</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                          value="option2" />
+                        <label class="form-check-label text-normal" for="inlineRadio2">Usado</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-5 mt-2">
+                  <label for="#" class="form-label text-title"><i class="bi bi-apple"></i> Marca</label>
+                </div>
+                <div class="col">
+                  <input class="form-control input-normal" list="datalistOptions" id="exampleDataList"
+                    placeholder="Type to search..." />
+                  <datalist id="datalistOptions">
+                    <option v-for="phone in masVendidos">
+                      {{phone}}
+                    </option>
+                  </datalist>
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-5 mt-2">
+                  <label for="#" class="form-label text-title"><i class="bi bi-columns-gap"></i> Modelo</label>
+                </div>
+                <div class="col">
+                  <input type="text " class="form-control input-normal" />
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-5 mt-2">
+                  <label for="#" class="form-label text-title"><i class="bi bi-phone-landscape"></i> Pantalla</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control input-normal" />
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-5 mt-2">
+                  <label for="#" class="form-label text-title"><i class="bi bi-terminal"></i> Sistema</label>
+                </div>
+                <div class="col">
+                  <input class="form-control input-normal" list="datalistOptions2" id="exampleDataList2"
+                    placeholder="Type to search..." />
+                  <datalist id="datalistOptions2">
+                    <option v-for="sistema in system">{{sistema}}</option>
+                  </datalist>
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-5 mt-2">
+                  <label for="#" class="form-label text-title"><i class="bi bi-cpu"></i> Rom</label>
+                </div>
+                <div class="col">
+                  <input type="text " class="form-control input-normal" />
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-5 mt-2">
+                  <label for="#" class="form-label text-title"><i class="bi bi-speedometer2"></i> Ram</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control input-normal" />
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3 mt-2 mx-auto  d-block d-md-none d-lg-none d-xl-none d-xxl-none">
+              <div class="container p-2 pb-3 shadow card-border">
+                <div class="col mt-2 ">
+                  <div class="form-group">
+                    <label class="mb-2 text-title" for="exampleFormControlTextarea1"><i class="bi bi-card-text"></i> DESCRIPCION</label>
+                    <textarea class="form-control input-normal" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-2 mb-2 d-block d-md-none d-lg-none d-xl-none d-xxl-none">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2">
+
+                  </div>
+
+                  <div class="col-8">
+                    <button class="btn btn-my">
+                      <i class="bi bi-x-lg"></i>
+                      CANCELAR
+                    </button>
+                    <button class="btn btn-my">
+                      <i class="bi bi-cloud-upload"></i>
+                      Crear anuncio
+                    </button>
+                  </div>
+                  <div class="col-2">
+
+                  </div>
+                </div-row>
+                
+                
               </div>
             </div>
           </div>
@@ -824,25 +957,25 @@
         screen: ["6", "5.5", "5"],
         cellPhones: [
           "Galaxy S21",
-          "Xiaomi Redmi 9",
+          "Xiaomi Redmi ",
           "Galaxy A32",
           "Galaxy Note 9",
           "iphone 13 Pro",
           "Google Pixel",
           "Galaxy Z Fold",
-          "Motorola Moto",
+          "Motorola M.",
           "OnePlus 9",
           "Asus ROG",
           "OPPO Find X3",
           "Xiaomi Mi 11",
-          "ASUS ZenFone 8",
+          "ASUS ZenFone",
           "OPPO Find X3",
-          "OnePlus Nord 2",
+          "OnePlus Nord",
           "Sony Xperia",
           "Vivo X60 Pro",
-          "Lenovo Legion",
+          "Lenovo LX3",
           "Realme GT",
-          "Motorola Edge",
+          "Motorola E",
         ],
         masVendidos: [
           "Samsung",
@@ -867,7 +1000,10 @@
           40, 200, 300, 500, 300, 700,
         ],
         activos: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-        guardados: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        guardados: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        precios: ['$420','$360','$120','$320','$720','$1000','$320','$172','$150','$720','$820','$220','$120','$720','$250','$670','$170','$420','$500','$410']
+      
+
       },
       methods: {
         //Metodo para obtener el nombre del celular en el modal
