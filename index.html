@@ -24,6 +24,10 @@
           " href="#">
         <i class="bi bi-megaphone-fill bi-lg principal-icon"></i>
       </a>
+      <button class="navbar-toggler navbar-toggler-my mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list text-title h2"></i>
+      </button>
       <label class="
             mt-1
             me-2
@@ -33,16 +37,12 @@
       <form class="d-flex">
         
         <input class="form-control me-2 rounded-pill mt-1 first-input input-normal" type="search" placeholder="Search"
-          aria-label="Search" />
-        <button class="btn btn-outline-success mt-1 btn-my" type="submit">
+          aria-label="Search" style="width: 22rem;"/>
+        <button class="btn btn-outline-success mt-1 btn-my d-none d-sm-block d-lg-block d-xl-block d-xxl-block" type="submit">
           Search
         </button>
       </form>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+      
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item d-xl-none d-md-none d-lg-none">
@@ -58,12 +58,13 @@
             <i class="bi bi-graph-up-arrow"></i>
             Estadisticas
           </button>
+
           <button class="btn me-2 mt-1 btn-my">
             <i class="bi bi-cart-dash"></i>
             Cesta
           </button>
 
-          <button type="button" class="btn me-4 mt-1 btn-my" data-bs-toggle="modal" data-bs-target="#modalProduct">
+          <button class="btn me-2 mt-1 btn-my" data-bs-toggle="modal" data-bs-target="#modalProduct">
             <i class="bi bi-plus-circle"></i>
             Publicar
           </button>
@@ -77,56 +78,52 @@
     
     <div class="row">
       <!-- left menu-->
-      <div class="
-            col-3
-            d-xl-block d-md-none d-sm-none d-lg-none d-xs-none d-none
-            mt-5
-            overflow-auto
-          " style="height: 85vh">
-        <div class="container">
-          <!-- switch -->
-          <div class="form-check form-switch mb-2 mt-3">
-            <label class="form-check-label text-title" for="flexSwitchCheckChecked">Nuevo</label>
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" />
-          </div>
 
-          <!-- left menu lists-->
+      <div class="col-3 d-xl-block d-md-none d-sm-none d-lg-none d-xs-none d-none mt-5">
+            <div class="container position-fixed overflow-auto mt-4" style="height: 80%; width: 300px;">
+            <!-- switch -->
+                <div class="form-check form-switch mb-2 mt-3">
+                  <label class="form-check-label text-title" for="flexSwitchCheckChecked">Nuevo</label>
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" />
+                </div>
 
-          <!-- model list-->
-          <label class="mt-2 mb-2 text-title" for="marca">Modelos</label>
-          <ul class="list-group border-ul" id="marca">
-            <li v-for="modelos in models" class="list-group-item text-normal border-ul-2">
-              <input class="form-check-input me-1 border-ul" type="checkbox" vasitlue="" aria-label="..." />
-              {{modelos}}
-            </li>
-          </ul>
+              <!-- left menu lists-->
 
-          <!-- system list-->
-          <label class="mt-3 mb-2 text-title" for="marca">Sistema</label>
-          <ul class="list-group border-ul" id="marca">
-            <li v-for="sistema in system" class="list-group-item text-normal border-ul-2">
-              <input class="form-check-input me-1 border-ul" type="checkbox" vasitlue="" aria-label="..." />
-              {{sistema}}
-            </li>
-          </ul>
+              <!-- model list-->
+              <label class="mt-2 mb-2 text-title" for="marca">Modelos</label>
+              <ul class="list-group border-ul" id="marca">
+                <li v-for="modelos in models" class="list-group-item text-normal border-ul-2">
+                  <input class="form-check-input me-1 border-ul" type="checkbox" vasitlue="" aria-label="..." />
+                  {{modelos}}
+                </li>
+              </ul>
 
-          <!-- screen list-->
-          <label class="mt-3 mb-3 text-title" for="marca">Pantalla</label>
-          <ul class="list-group mb-3 border-ul" id="marca">
-            <li v-for="pantalla in screen" class="list-group-item text-normal border-ul-2">
-              <input class="form-check-input me-1 border-ul" type="checkbox" vasitlue="" aria-label="..." />
-              {{pantalla}}
-            </li>
-          </ul>
-        </div>
+              <!-- system list-->
+              <label class="mt-3 mb-2 text-title" for="marca">Sistema</label>
+              <ul class="list-group border-ul" id="marca">
+                <li v-for="sistema in system" class="list-group-item text-normal border-ul-2">
+                  <input class="form-check-input me-1 border-ul" type="checkbox" vasitlue="" aria-label="..." />
+                  {{sistema}}
+                </li>
+              </ul>
+
+              <!-- screen list-->
+              <label class="mt-3 mb-3 text-title" for="marca">Pantalla</label>
+              <ul class="list-group mb-3 border-ul" id="marca">
+                <li v-for="pantalla in screen" class="list-group-item text-normal border-ul-2">
+                  <input class="form-check-input me-1 border-ul" type="checkbox" vasitlue="" aria-label="..." />
+                  {{pantalla}}
+                </li>
+              </ul>
+            </div>
       </div>
 
       <!-- main container-->
-      <div class="col mt-5 overflow-auto" style="height: 85vh">
+      <div class="col mt-5" >
         <!-- filters-->
 
         <!-- mobile list -->
-        <div class="row mt-2 d-xl-none d-xxl-none d-md-none d-sm-block d-lg-none d-block">
+        <div class="row mt-2 d-xl-none d-xxl-none d-md-block d-sm-block d-lg-block d-block">
           <div class="col">
 
             <div class="row">
@@ -170,7 +167,7 @@
 
                 <div class="row">
 
-                  <div class="col-4 mb-3 mx-auto">
+                  <div class="col-4 mb-3 ">
                     <!-- model list-->
                     <label class="mt-3 mb-2 text-title " for="marca">Modelos</label>
                     <ul class="list-group border-ul" id="marca">
@@ -259,8 +256,8 @@
                 mt-2
                 mb-2
               ">
-            <div class="card shadow bg-body rounded card-border" style="width: 12rem">
-              <img src="assets/imagen" class="card-img-top" alt="..." width="192px" height="150px" />
+            <div class="card shadow bg-body rounded card-border" style="width: 13rem">
+              <img src="assets/imagen" class="card-img-top" alt="..." width="190px" height="150px" />
               <div class="card-body">
                 <h5 class="card-title text-title">{{phones}}</h5>
                 <p class="card-text text-normal">
@@ -277,20 +274,20 @@
                 <div class="row mt-3">
                   <div class="col-3">
                     <div class="row">
-                      <a href="#" class="btn-fav text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="Agregar a favoritos">
+                      <button class="btn-fav text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="Agregar a favoritos">
                         <i v-on:click="cambiarIconLove(id)" class="bi bi-heart" :id="`love${id}`"></i>
-                      </a>
+                      </button>
                     </div>
                     <div class="row mx-auto text-danger" :id="`favNumber${id}`" >{{favorites[id]}}</div>
                   </div>
 
                   <div class="col-3">
                     <div class="row">
-                      <a href="#" class="btn-fav text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="Guardar anuncio">
+                      <button class="btn-fav text-dark" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                      title="Guardar anuncio">
                         <i v-on:click="cambiarIconSalvarPublicacion(id)" class="bi bi-bookmark-plus" :id="`salvar${id}`"></i>
-                      </a>
+                      </button>
                     </div>
                     <div class="row mx-auto text-dark" :id="`salvarNumber${id}`">{{save[id]}}</div>
                   </div>
