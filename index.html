@@ -14,7 +14,7 @@
 
     <header><!--Inicio del header-->
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bgPrimero">
+        <nav class="navbar navbar-expand-lg navbar-dark bgPrimero fixed-top mb-4">
           <div class="container marginCenterNav">
 
               <!--Titulo-->
@@ -57,11 +57,11 @@
     </header><!--Fin del header-->
 
 
-    <div class="container"> <!--Inicio contenido principal-->
+    <div class="container-fluid mt-5"> <!--Inicio contenido principal-->
        <div class="row"> <!--ROW PRINCIPAL-->
 
         
-        <div class="col-12 col-lg-3"> <!--Filtro por marcas-->
+        <div class="col-12 col-lg-3 "> <!--Filtro por marcas-->
 
           <!--Collapse filtro-->
           <button class="navbar-toggler d-lg-none mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#Filtro" aria-controls="Filtro" aria-expanded="false" aria-label="Toogle navigation">
@@ -154,7 +154,7 @@
           <!--Fin collapse botton-->
           
 
-          <aside class="container-fluid mt-5 overflow-auto d-none d-lg-block" style="height: 500px;"><!--Inicio filtros aside-->
+          <aside class="container  mt-5 overflow-auto d-none d-lg-block position-fixed " style="height: 500px; width: 300px; margin-left: none; margin-top: 100px;"><!--Inicio filtros aside-->
             
             <div class="form-check form-switch"><!--Boton nuevo-->
               <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -232,7 +232,7 @@
         </div><!--FIN Filtro por marcas-->
 
 
-        <div class="col-12 col-lg-9 mt-3 "><!--Productos-->
+        <div class="col-12 col-lg-9 mt-5 "><!--Productos-->
 
           <div class="d-none d-md-inline-flex"> <!--filtro precio en pc-->
             
