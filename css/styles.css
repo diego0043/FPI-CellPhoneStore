@@ -9,17 +9,16 @@
 }
   
 .bg-02{
-  background-color: #E2DBD7  !important;
+  background-color: #212529  !important;
 }
 
 .bg-03{
   background-color: #FFFFFF   !important;
 }
 
-.bg-04{
-  background-color: #0B6873  !important;
+.text-bg-02{
+  color: #212529 !important;
 }
-
 
 .border-bg01{
   border: 1px solid #f37848 !important;
