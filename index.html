@@ -34,14 +34,14 @@
             d-xl-block d-lg-none d-md-none d-sm-none d-none
             text-title
           " for="">Tienda CellPhone</label>
-      <form class="d-flex" style="position: relative; ">
-        <i class="bi bi-search text-normal" style="margin-top:10px; position: absolute;top: 1px; left: 14px;"></i>
+      <form class="d-flex " style="position: relative;">
+        <i class="bi bi-search text-normal" style="position: absolute; margin-top: 10px; top: 1px; left: 14px; "></i>
         <input class="form-control me-2 rounded-pill mt-1 first-input input-normal" type="search" placeholder="Search"
           aria-label="Search" style="width: 19rem;"/>
         <button class="btn btn-outline-success mt-1 btn-my d-none d-sm-block d-lg-block d-xl-block d-xxl-block" type="submit">
           Search
         </button>
-    </form>
+      </form>
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -251,15 +251,17 @@
         <!-- cards-->
 
         <div class="row mt-3">
-
-          <div v-for="(phones,id) in cellPhones" :key="id" class="col-sm-6 col-lg-3 col-md-4 col-xl-3 col-xxl-3 col-6 mt-2 mb-2">
-
-            <div class="card shadow bg-body card-hover rounded card-border">
+          <div v-for="(phones,id) in cellPhones" :key="id" class="
+                col-sm-6 col-lg-3 col-md-4 col-xl-3 col-xxl-3 col-6
+                mt-2
+                mb-2
+              ">
+            <div class="card shadow bg-body rounded card-border" style="width: 12rem">
               <img src="assets/imagen" class="card-img-top" alt="..." width="190px" height="150px" />
               <div class="card-body">
-                <h5 class="card-title text-title h5">{{phones}} - {{precios[id]}}</h5>
-                <p class="card-text text-normal text-start">
-                  {{phones}}, pantalla de 5.5 64Gb, 2 Gb ram, color negro
+                <h5 class="card-title text-title">{{phones}}</h5>
+                <p class="card-text text-normal">
+                  title and make up the bulk of the card's content.
                 </p>
                 <button v-on:click="obtenerNombre(id)" type="button" class="btn btn-my text-title"
                   data-bs-toggle="modal" data-bs-target="#myModal">
@@ -277,7 +279,7 @@
                         <i v-on:click="cambiarIconLove(id)" class="bi bi-heart" :id="`love${id}`"></i>
                       </button>
                     </div>
-                    <div class="row mx-auto text-danger text-center" :id="`favNumber${id}`" >{{favorites[id]}}</div>
+                    <div class="row mx-auto text-danger" :id="`favNumber${id}`" >{{favorites[id]}}</div>
                   </div>
 
                   <div class="col-3">
@@ -287,7 +289,7 @@
                         <i v-on:click="cambiarIconSalvarPublicacion(id)" class="bi bi-bookmark-plus" :id="`salvar${id}`"></i>
                       </button>
                     </div>
-                    <div class="row mx-auto text-dark text-center" :id="`salvarNumber${id}`">{{save[id]}}</div>
+                    <div class="row mx-auto text-dark" :id="`salvarNumber${id}`">{{save[id]}}</div>
                   </div>
                 </div>
               </div>
@@ -433,33 +435,28 @@
                           </div>
                         </div>
                       </div>
+                      
+                      <div class="container  d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+                        <div class="row fixed-bottom mx-auto">
 
-                      <div class="row mt-2 mb-4 d-block d-md-block d-lg-none d-xl-none d-xxl-none">
-                        <div class="container fixed-bottom">
-                          <div class="row">
-                            <div class="col-3">
-          
-                            </div>
-          
-                            <div class="col-8 mx-auto mb-1">
-                              <button class="btn btn-home ">
-                                <i class="bi bi-house"></i>
-                                Inicio
-                              </button>
-                              <button class="btn btn-buy">
-                                <i class="bi bi-cart-plus"></i>
-                                Comprar
-                              </button>
-                            </div>
-                            <div class="col">
-          
-                            </div>
-                          </div-row>
-                          
-                          
+                          <div class="col-3">
+
+                          </div>
+                          <div class="col-8">
+                            <button type="button" class="btn btn-home mt-3 mb-2">
+                              <i class="bi bi-house"></i>
+                              Inicio
+                            </button>
+                            <button type="button" class="btn btn-comprar mt-3 mb-2">
+                              <i class="bi bi-cart-plus"></i>
+                              comprar
+                            </button>
+                          </div>
+                          <div class="col">
+
+                          </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -611,7 +608,7 @@
 
               <!-- seller form-->
               <div class="col-xl-6">
-                <div class="container shadow p-3 card-border mb-2 ">
+                <div class="container shadow p-3 card-border mb-2">
 
                   <div class="row">
                    <!-- agregar carousel funcional luego-->
@@ -633,22 +630,18 @@
                   <div class="row mb-2 d-block d-xl-none d-xxl-none d-lg-none">
 
                     <div class="row-fluid">
-                      <div class="row">
-                        <div class="col-4 mt-2">
-                          <label for="#" class="form-label text-title"><i class="bi bi-cash"></i> Precio</label>
-                        </div>
-    
-                        <div class="col p2">
-                          <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text input-icon">$</span>
-                            </div>
-                            <input type="text" class="form-control input-normal" aria-label="Amount (to the nearest dollar)" />
+                      <div class="col-4 mt-2">
+                        <label for="#" class="form-label text-title"><i class="bi bi-cash"></i> Precio</label>
+                      </div>
+  
+                      <div class="col p2">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text input-icon">$</span>
                           </div>
+                          <input type="text" class="form-control input-normal" aria-label="Amount (to the nearest dollar)" />
                         </div>
                       </div>
-
-                      
 
                     </div>
 
@@ -673,7 +666,7 @@
                     </div>
                   </div>
 
-                  <div class="row mb-2 pb-2 d-none d-lg-block d-xl-block d-xxl-block">
+                  <div class="row mb-2 d-none d-lg-block d-xl-block d-xxl-block">
                     <div class="col mt-2">
                       <div class="form-group">
                         <label class="mb-2 text-title" for="exampleFormControlTextarea1"><i class="bi bi-card-text"></i> DESCRIPCION</label>
@@ -686,167 +679,125 @@
               </div>
             </div>
 
+            <div class="row mt-4">
+              <div class="col-xl-8">
+                <div class="container">
+                  <div class="row mt-2">
+                    <div class="col-3">
+                      <div class="row mb-3 mt-4">
+                        <button type="button" class="btn btn-outline-success">
+                          <i class="bi bi-card-image"></i>
+                          Nueva
+                        </button>
+                      </div>
 
-            <!-- Agregar imagen en dispositivos grandes -->
-            <div class="row mt-4 mx-auto shadow card-border d-none d-none d-xl-block d-xxl-block">
+                      <div class="row mb-3">
+                        <button type="button" class="btn btn-outline-success">
+                          <i class="bi bi-trash"></i>
+                          Eliminar
+                        </button>
+                      </div>
 
-              <div class="col-4">
-
-                <div class="row">
-                  <div class="item-wrapper one">
-                    <div class="item">
-                        <form data-validation="true" action="#" method="post" enctype="multipart/form-data">
-                            <div class="item-inner">
-                                <div class="item-content p-2">
-                                    <div class="image-upload"> <label style="cursor: pointer;" for="file_upload"> <i class="bi bi-cloud-upload text-normal"></i>
-                                            <div class="h-50">
-                                                <div class="dplay-tbl">
-                                                    <div class="dplay-tbl-cell"> <i class="fa fa-cloud-upload"></i>
-                                                        <h5 class="text-title"><b>Seleccionar imagen para subir</b></h5>
-                                                        <h6 class="mt-10 mb-70 text-normal">o arrastra aqui un archivo</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--upload-content--> <input data-required="image" type="file" name="image_name" id="file_upload" class="image-input" data-traget-resolution="image_resolution" value="">
-                                        </label> </div>
-                                </div>
-                                <!--item-content-->
+                      <div class="row">
+                        <div class="container-fluid">
+                          <div class="progress">
+                            <div class="
+                                  progress-bar
+                                  progress-bar-striped
+                                  progress-bar-animated
+                                " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                              style="width: 75%">
+                              75%
                             </div>
-                            <!--item-inner-->
-                        </form>
-                   </div>
-                    <!--item-->
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="container shadow p-3 card-border mb-3 mt-2 mx-auto  d-block d-md-block d-lg-block d-xl-none d-xxl-none">
-
-              <div class="row mb-1">
-                <div class="col">
-                  <div class="row">
-                    <div class="col-5">
-                      <label for="#" class="form-label text-title"><i class="bi bi-phone"></i> Estado</label>
+                    <div class="col-5 ml-2">
+                      <div class="container">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Tamaño</th>
+                              <th scope="col">Tipo</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>145 kb</td>
+                              <td>jpg</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>145 kb</td>
+                              <td>png</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>145 kb</td>
+                              <td>png</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
+
                     <div class="col">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                          value="option1" />
-                        <label class="form-check-label text-normal" for="inlineRadio1">Nuevo</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                          value="option2" />
-                        <label class="form-check-label text-normal" for="inlineRadio2">Usado</label>
+                      <div class="container mt-2" style="width: 200px; height: 150px">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide mt-2" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="assets/imagen" class="d-block mx-auto" alt="..." height="150px" />
+                            </div>
+                            <div class="carousel-item">
+                              <img src="assets/13pro" class="d-block mx-auto" alt="..." height="150px" />
+                            </div>
+                            <div class="carousel-item">
+                              <img src="assets/s21" class="d-block mx-auto" alt="..." height="150px" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="row mb-2">
-                <div class="col-5 mt-2">
-                  <label for="#" class="form-label text-title"><i class="bi bi-apple"></i> Marca</label>
-                </div>
-                <div class="col">
-                  <input class="form-control input-normal" list="datalistOptions" id="exampleDataList"
-                    placeholder="Type to search..." />
-                  <datalist id="datalistOptions">
-                    <option v-for="phone in masVendidos">
-                      {{phone}}
-                    </option>
-                  </datalist>
-                </div>
-              </div>
-
-              <div class="row mb-2">
-                <div class="col-5 mt-2">
-                  <label for="#" class="form-label text-title"><i class="bi bi-columns-gap"></i> Modelo</label>
-                </div>
-                <div class="col">
-                  <input type="text " class="form-control input-normal" />
-                </div>
-              </div>
-
-              <div class="row mb-2">
-                <div class="col-5 mt-2">
-                  <label for="#" class="form-label text-title"><i class="bi bi-phone-landscape"></i> Pantalla</label>
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control input-normal" />
-                </div>
-              </div>
-
-              <div class="row mb-2">
-                <div class="col-5 mt-2">
-                  <label for="#" class="form-label text-title"><i class="bi bi-terminal"></i> Sistema</label>
-                </div>
-                <div class="col">
-                  <input class="form-control input-normal" list="datalistOptions2" id="exampleDataList2"
-                    placeholder="Type to search..." />
-                  <datalist id="datalistOptions2">
-                    <option v-for="sistema in system">{{sistema}}</option>
-                  </datalist>
-                </div>
-              </div>
-
-              <div class="row mb-2">
-                <div class="col-5 mt-2">
-                  <label for="#" class="form-label text-title"><i class="bi bi-cpu"></i> Rom</label>
-                </div>
-                <div class="col">
-                  <input type="text " class="form-control input-normal" />
-                </div>
-              </div>
-
-              <div class="row mb-2">
-                <div class="col-5 mt-2">
-                  <label for="#" class="form-label text-title"><i class="bi bi-speedometer2"></i> Ram</label>
-                </div>
-                <div class="col">
-                  <input type="text" class="form-control input-normal" />
-                </div>
-              </div>
-            </div>
-
-            <div class="row mb-3 mt-2 mx-auto  d-block d-md-block d-lg-none d-xl-none d-xxl-none">
-              <div class="container p-2 pb-3 shadow card-border">
-                <div class="col mt-2 ">
-                  <div class="form-group">
-                    <label class="mb-2 text-title" for="exampleFormControlTextarea1"><i class="bi bi-card-text"></i> DESCRIPCION</label>
-                    <textarea class="form-control input-normal" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row mt-2 mb-2 d-block d-md-block d-lg-block d-xl-none d-xxl-none">
-              <div class="container">
+              <div class="col-xl-4 p-2">
                 <div class="row">
-                  <div class="col">
+                  <label for="" class="form-label mb-2">PRECIO</label>
+                </div>
 
+                <div class="row mb-2">
+                  <div class="col-6">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+                      <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                      </div>
+                    </div>
                   </div>
+                </div>
 
-                  <div class="col-10">
-
-                    <button class="btn btn-my">
-                      <i class="bi bi-x-lg"></i>
+                <div class="row">
+                  <div class="container">
+                    <button type="button" class="btn btn-outline-danger">
+                      <i class="bi bi-x"></i>
                       CANCELAR
                     </button>
 
-                    <button class="btn btn-new-product">
-                      <i class="bi bi-cloud-upload"></i>
-                      Crear anuncio
+                    <button type="button" class="btn btn-outline-success">
+                      <i class="bi bi-cloud-arrow-up-fill"></i>
+                      PUBLICAR
                     </button>
-
                   </div>
-                  <div class="col">
-
-                  </div>
-                </div-row>
-                
-                
+                </div>
               </div>
             </div>
           </div>
@@ -870,25 +821,25 @@
         screen: ["6", "5.5", "5"],
         cellPhones: [
           "Galaxy S21",
-          "Xiaomi Redmi ",
+          "Xiaomi Redmi 9",
           "Galaxy A32",
           "Galaxy Note 9",
           "iphone 13 Pro",
           "Google Pixel",
           "Galaxy Z Fold",
-          "Motorola M.",
+          "Motorola Moto",
           "OnePlus 9",
           "Asus ROG",
           "OPPO Find X3",
           "Xiaomi Mi 11",
-          "ASUS ZenFone",
+          "ASUS ZenFone 8",
           "OPPO Find X3",
-          "OnePlus Nord",
+          "OnePlus Nord 2",
           "Sony Xperia",
           "Vivo X60 Pro",
-          "Lenovo LX3",
+          "Lenovo Legion",
           "Realme GT",
-          "Motorola E",
+          "Motorola Edge",
         ],
         masVendidos: [
           "Samsung",
@@ -913,10 +864,7 @@
           40, 200, 300, 500, 300, 700,
         ],
         activos: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-        guardados: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-        precios: ['$420','$360','$120','$320','$720','$1000','$320','$172','$150','$720','$820','$220','$120','$720','$250','$670','$170','$420','$500','$410']
-      
-
+        guardados: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
       },
       methods: {
         //Metodo para obtener el nombre del celular en el modal
