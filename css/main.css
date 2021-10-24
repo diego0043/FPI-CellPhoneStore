@@ -4,7 +4,8 @@
     --my-success: #E5B299;
     --my-info: #FCDEC0;
  }
-  
+
+ 
  .principal-icon{
     color: var(--my-secondary);
  }
@@ -172,6 +173,79 @@
     background-color: var(--my-secondary);
     color: white;
  }
+
+ .item .item-content {
+    padding: 20px;
+}
+
+.image-upload {
+    margin-top: 30px;
+    width: 100%;
+    height: 250px;
+    border: 3px dotted var(--my-secondary);
+    border-radius: 5px;
+    margin-bottom: 40px;
+    position: relative;
+    text-align: center;
+    background: #f8f8f9;
+    color: #666;
+    overflow: hidden
+}
+
+.item-wrapper form img {
+    margin-bottom: 40px;
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    width: auto;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.image-upload img {
+    height: 100% !important;
+    width: auto !important;
+    border-radius: 0px;
+    margin: 0 auto
+}
+
+.image-upload i {
+    font-size: 6em;
+    color: #ccc
+}
+
+.image-upload input {
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.item-wrapper input {
+    height: 43px;
+    line-height: 43px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px
+}
+
+.card-hover:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer
+}
+
+.card-hover:hover::before{
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer
+}
+
+
   
   
  
