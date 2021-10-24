@@ -207,3 +207,14 @@
 	transform: scale(500);
 	background: #000;
 }
+
+.boton.comprar{
+	height: 55px !important;
+	text-transform: uppercase;
+	width: 200px !important; 
+}
+
+.boton.comprar:hover{
+	background-color: #f37848;
+}
+

@@ -39,17 +39,7 @@
   padding: 0 10px;
 }
 
-.input-bar form{
-  position: relative;
-}
 
-.input-bar form i{
-  
-  margin-top: 10px;
-  position: absolute;
-  top: 1px;
-  left: 14px;
-}
 
 /* iconos */
 
@@ -73,6 +63,12 @@
 .form-check-input:checked{
   background-color: #FF7146;
   border: 1px solid #FF7146;
+}
+
+.first-input{
+  border: 1px solid #3d3f41;
+  color: #3d3f41 !important;
+  text-indent: 25px;
 }
 
 
