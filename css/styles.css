@@ -39,7 +39,17 @@
   padding: 0 10px;
 }
 
+.input-bar form{
+  position: relative;
+}
 
+.input-bar form i{
+  
+  margin-top: 10px;
+  position: absolute;
+  top: 1px;
+  left: 14px;
+}
 
 /* iconos */
 
